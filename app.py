@@ -1,4 +1,5 @@
 from flask import Flask, redirect, url_for
+import os
 app = Flask(__name__)
 
 @app.route('/')
@@ -15,6 +16,5 @@ def name1(name):
         return redirect(url_for('admin'))
     return 'hello  ' + name
 
-
-
-app.run(port=5000,debug = True)
+portno = os.environ.get('PORT')
+app.run(port=portno,debug = True)
