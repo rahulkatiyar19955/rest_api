@@ -17,4 +17,4 @@ def name1(name):
     return 'hello  ' + name
 
 portno = os.environ.get('PORT')
-app.run(port=portno,debug = True)
+app.run(port=portno,host= '0.0.0.0',debug = True)
